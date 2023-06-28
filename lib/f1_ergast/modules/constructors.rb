@@ -1,7 +1,8 @@
 module F1Ergast
   class Constructors < ErgastServices
-    def list_all
-      result = get_request
+    def list_all(offset = 0)
+      url = "#{CONSTRUCTORS}?offset=#{offset}"
+      result = get_request(url)
       result
     end
 
