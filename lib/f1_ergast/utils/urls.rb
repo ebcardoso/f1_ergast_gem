@@ -4,6 +4,9 @@ module F1Ergast
   # Constructors
   CONSTRUCTORS = 'constructors'
 
+  # Drivers
+  DRIVERS = 'drivers'
+
   # Results
   RACE_RESULT = 'results'
   MOST_RECENT = 'current/last/results'
