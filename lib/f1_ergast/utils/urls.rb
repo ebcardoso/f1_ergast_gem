@@ -1,6 +1,8 @@
 module F1Ergast
   ROOT_URL = 'http://ergast.com/api/f1/'
 
+  CIRCUITS = 'circuits'
+
   # Constructors
   CONSTRUCTORS = 'constructors'
 
