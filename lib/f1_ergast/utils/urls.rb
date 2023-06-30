@@ -4,6 +4,7 @@ module F1Ergast
   CIRCUITS = 'circuits'
   CONSTRUCTORS = 'constructors'
   DRIVERS = 'drivers'
+  QUALIFYING = 'qualifying'
   RESULT_MOST_RECENT = 'current/last/results'
   RESULT_RACE = 'results'
   SEASONS = 'seasons'
