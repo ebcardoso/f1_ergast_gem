@@ -4,6 +4,7 @@ module F1Ergast
   CIRCUITS = 'circuits'
   CONSTRUCTORS = 'constructors'
   DRIVERS = 'drivers'
+  FINISHING_STATUS = 'status'
   QUALIFYING = 'qualifying'
   RESULT_MOST_RECENT = 'current/last/results'
   RESULT_RACE = 'results'
