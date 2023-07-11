@@ -5,6 +5,7 @@ module F1Ergast
   CONSTRUCTORS = 'constructors'
   DRIVERS = 'drivers'
   STANDINGS_CURRENT = 'current'
+  STANDINGS_CONSTRUCTORS = 'constructorStandings'
   STANDINGS_DRIVER = 'driverStandings'
   FINISHING_STATUS = 'status'
   LAPS = 'laps'
