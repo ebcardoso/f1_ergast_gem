@@ -4,6 +4,8 @@ module F1Ergast
   CIRCUITS = 'circuits'
   CONSTRUCTORS = 'constructors'
   DRIVERS = 'drivers'
+  STANDINGS_CURRENT = 'current'
+  STANDINGS_DRIVER = 'driverStandings'
   FINISHING_STATUS = 'status'
   LAPS = 'laps'
   PITSTOPS = 'pitstops'
