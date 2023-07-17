@@ -4,18 +4,24 @@ module F1Ergast
       url = "#{FINISHING_STATUS}?offset=#{offset}"
       result = get_request(url)
       result
+    rescue
+      return { error: 'Error to request Ergast API.' }
     end
 
     def by_year(year)
       url = "#{year}/#{FINISHING_STATUS}"
       result = get_request(url)
       result
+    rescue
+      return { error: 'Error to request Ergast API.' }
     end
 
     def by_year_in_round(year, round)
       url = "#{year}/#{round}/#{FINISHING_STATUS}"
       result = get_request(url)
       result
+    rescue
+      return { error: 'Error to request Ergast API.' }
     end
   end
 end

@@ -4,6 +4,8 @@ module F1Ergast
       url = "#{year}/#{round}/#{LAPS}/#{lap_number}"
       result = get_request(url)
       result
+    rescue
+      return { error: 'Error to request Ergast API.' }
     end
   end
 end
