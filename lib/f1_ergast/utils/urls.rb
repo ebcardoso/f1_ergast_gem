@@ -14,4 +14,5 @@ module F1Ergast
   RESULT_MOST_RECENT = 'current/last/results'
   RESULT_RACE = 'results'
   SEASONS = 'seasons'
+  SCHEDULE_CURRENT = 'current'
 end

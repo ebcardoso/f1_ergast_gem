@@ -1,15 +1,17 @@
 module F1Ergast
   class Results < ErgastServices
-    def race_result(year, round)
+    def race_result(year, round, offset = 0, limit = 10)
       url = "#{year}/#{round}/#{RESULT_RACE}"
-      result = get_request(url)
+      query = "?offset=#{offset}&limit=#{limit}"
+      result = get_request(url, query)
       result
     rescue
       return { error: 'Error to request Ergast API.' }
     end
     
-    def most_recent
-      result = get_request(RESULT_MOST_RECENT)
+    def most_recent(offset = 0, limit = 10)
+      query = "?offset=#{offset}&limit=#{limit}"
+      result = get_request(RESULT_MOST_RECENT, query)
       result
     rescue
       return { error: 'Error to request Ergast API.' }

@@ -10,8 +10,8 @@ module F1Ergast
       }
     end
 
-    def get_request(path_url)
-      HTTParty.get("#{@url}#{path_url}", headers: @headers)
+    def get_request(path_url, query = '')
+      HTTParty.get("#{@url}#{path_url}.json#{query}", headers: @headers)
     end
   end
 end
