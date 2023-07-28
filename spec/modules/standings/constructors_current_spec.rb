@@ -4,8 +4,7 @@ require 'f1_ergast'
 RSpec.describe F1Ergast::Standings do
   context 'Success Path' do
     before(:all) do
-      service = F1Ergast::Standings.new
-      @result = service.constructors_current
+      @result = F1Ergast::Standings.constructors_current
     end
 
     it 'Should have status 200' do

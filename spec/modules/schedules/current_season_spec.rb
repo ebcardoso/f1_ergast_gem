@@ -4,8 +4,7 @@ require 'f1_ergast'
 RSpec.describe F1Ergast::Schedules do
   context 'Success Path' do
     before(:all) do
-      service = F1Ergast::Schedules.new
-      @result = service.current_season
+      @result = F1Ergast::Schedules.current_season
     end
 
     it 'Should have status 200' do

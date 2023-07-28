@@ -4,8 +4,7 @@ require 'f1_ergast'
 RSpec.describe F1Ergast::FinishingStatus do
   context 'Success Path' do
     before(:all) do
-      service = F1Ergast::FinishingStatus.new
-      @result = service.list_all(0)
+      @result = F1Ergast::FinishingStatus.list_all(0)
     end
 
     it 'Should have status 200' do

@@ -2,16 +2,19 @@ require 'httparty'
 
 module F1Ergast
   class ErgastServices
-    def initialize
-      @url = ROOT_URL
-      @headers = {
+    def self.get_url
+      ROOT_URL
+    end
+
+    def self.get_headers
+      {
         'Content-Type' => 'application/json',
         'Accept' => 'application/json'
       }
     end
 
-    def get_request(path_url, query = '')
-      HTTParty.get("#{@url}#{path_url}.json#{query}", headers: @headers)
+    def self.get_request(path_url, query = '')
+      HTTParty.get("#{get_url}#{path_url}.json#{query}", headers: get_headers)
     end
   end
 end

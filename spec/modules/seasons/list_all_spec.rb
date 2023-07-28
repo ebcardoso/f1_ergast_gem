@@ -4,8 +4,7 @@ require 'f1_ergast'
 RSpec.describe F1Ergast::Drivers do
   context 'Success Path' do
     before(:all) do
-      service = F1Ergast::Drivers.new
-      @result = service.list_all(30)
+      @result = F1Ergast::Drivers.list_all(30)
     end
 
     it 'Should have status 200' do

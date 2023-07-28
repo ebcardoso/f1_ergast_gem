@@ -1,6 +1,6 @@
 module F1Ergast
   class Seasons < ErgastServices
-    def list_all(offset = 0, limit = 10)
+    def self.list_all(offset = 0, limit = 10)
       url = "#{SEASONS}"
       query = "?offset=#{offset}&limit=#{limit}"
       result = get_request(url, query)

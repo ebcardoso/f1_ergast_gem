@@ -1,6 +1,6 @@
 module F1Ergast
   class Schedules < ErgastServices
-    def by_year(year, offset = 0, limit = 10)
+    def self.by_year(year, offset = 0, limit = 10)
       url = "#{year}"
       query = "?offset=#{offset}&limit=#{limit}"
       result = get_request(url, query)
@@ -9,7 +9,7 @@ module F1Ergast
       return { error: 'Error to request Ergast API.' }
     end
 
-    def by_race(year, round)
+    def self.by_race(year, round)
       url = "#{year}/#{round}"
       result = get_request(url)
       result
@@ -17,7 +17,7 @@ module F1Ergast
       return { error: 'Error to request Ergast API.' }
     end
 
-    def current_season(offset = 0, limit = 10)
+    def self.current_season(offset = 0, limit = 10)
       query = "?offset=#{offset}&limit=#{limit}"
       result = get_request(SCHEDULE_CURRENT, query)
       result
