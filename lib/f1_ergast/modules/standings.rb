@@ -56,5 +56,24 @@ module F1Ergast
     rescue
       return { error: 'Error to request Ergast API.' }
     end
+
+    #History
+    def self.history_by_driver(driver_id, offset = 0, limit = 10)
+      url = "#{DRIVERS}/#{driver_id}/#{STANDINGS_DRIVER}"
+      query = "?offset=#{offset}&limit=#{limit}"
+      result = get_request(url, query)
+      result
+    rescue
+      return { error: 'Error to request Ergast API.' }
+    end
+
+    def self.history_by_constructor(constructor_id, offset = 0, limit = 10)
+      url = "#{CONSTRUCTORS}/#{constructor_id}/#{STANDINGS_CONSTRUCTORS}"
+      query = "?offset=#{offset}&limit=#{limit}"
+      result = get_request(url, query)
+      result
+    rescue
+      return { error: 'Error to request Ergast API.' }
+    end
   end
 end
