@@ -75,5 +75,24 @@ module F1Ergast
     rescue
       return { error: 'Error to request Ergast API.' }
     end
+
+    # Winners
+    def self.winners_by_drivers(offset = 0, limit = 10)
+      url = "#{STANDINGS_DRIVER}/1"
+      query = "?offset=#{offset}&limit=#{limit}"
+      result = get_request(url, query)
+      result
+    rescue
+      return { error: 'Error to request Ergast API.' }
+    end
+
+    def self.winners_by_constructors(offset = 0, limit = 10)
+      url = "#{STANDINGS_CONSTRUCTORS}/1"
+      query = "?offset=#{offset}&limit=#{limit}"
+      result = get_request(url, query)
+      result
+    rescue
+      return { error: 'Error to request Ergast API.' }
+    end
   end
 end
