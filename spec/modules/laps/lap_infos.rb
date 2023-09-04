@@ -5,7 +5,6 @@ RSpec.describe F1Ergast::Laps do
   context 'Success Path' do
     before(:all) do
       @result = F1Ergast::Laps.lap_infos(Date.current.year-1, 1, 10)
-      puts @result
     end
 
     it 'Should have status 200' do

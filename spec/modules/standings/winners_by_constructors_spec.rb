@@ -8,7 +8,6 @@ RSpec.describe F1Ergast::Standings do
     end
 
     it 'Should have status 200' do
-      puts @result
       expect(@result.code).to eq(200)
     end
   end

@@ -18,7 +18,7 @@ module F1Ergast
       return { error: 'Error to request Ergast API.' }
     end
 
-    def self.by_year_in_round(year, round)
+    def self.by_race(year, round)
       url = "#{year}/#{round}/#{CIRCUITS}"
       result = get_request(url)
       result
